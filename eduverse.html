@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse - Learning Without Breaks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="eduverse.css">
+    <script defer src="eduverse.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>EduVerse</h1>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-section="courses">Courses</a></li>
+                        <li><a href="#" class="nav-link" data-section="resources">Resources</a></li>
+                        <li><a href="#" class="nav-link" data-section="about">About</a></li>
+                        <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons" id="authButtons">
+                    <button class="btn btn-outline" id="loginBtn">Login</button>
+                    <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+                </div>
+                
+                <div id="userMenu" style="display: none;">
+                    <button class="btn btn-outline" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h2>Learning Without Breaks. Education Without Boundaries.</h2>
+                <p>Access your school's learning materials anytime, anywhere - during holidays or class time. Subscribe now to continue your educational journey without interruptions.</p>
+                <button class="btn btn-primary" id="subscribeBtn">Subscribe Now</button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose EduVerse?</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>24/7 Access</h3>
+                        <p>Access learning materials anytime, even during school holidays and breaks.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-school"></i>
+                        <h3>School-Specific Content</h3>
+                        <p>Content curated and uploaded directly by your school and teachers.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Multi-Device Support</h3>
+                        <p>Learn on your phone, tablet, or computer - wherever you are.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-download"></i>
+                        <h3>Offline Access</h3>
+                        <p>Download materials for offline use when you don't have internet access.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Interactive Community</h3>
+                        <p>Connect with classmates and teachers through our moderated discussion boards.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your learning progress with built-in analytics and achievement badges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing">
+            <div class="container">
+                <h2 class="section-title">Subscription Plans</h2>
+                <p class="text-center">Choose the plan that works best for you. All plans include full access to your school's content.</p>
+                
+                <div class="pricing-options">
+                    <div class="pricing-card">
+                        <h3>Monthly Plan</h3>
+                        <div class="price">$4.99<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Full access to all materials</li>
+                            <li><i class="fas fa-check"></i> Mobile and web access</li>
+                            <li><i class="fas fa-check"></i> Download up to 10 items</li>
+                            <li><i class="fas fa-check"></i> Basic support</li>
+                        </ul>
+                        <button class="btn btn-primary select-plan" data-plan="monthly">Select Plan</button>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="popular">POPULAR</div>
+                        <h3>Annual Plan</h3>
+                        <div class="price">$49.99<span>/year</span></div>
+                        <p>Save 15% compared to monthly</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Full access to all materials</li>
+                            <li><i class="fas fa-check"></i> Mobile and web access</li>
+                            <li><i class="fas fa-check"></i> Unlimited downloads</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Early access to new features</li>
+                        </ul>
+                        <button class="btn btn-primary select-plan" data-plan="annual">Select Plan</button>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Family Plan</h3>
+                        <div class="price">$79.99<span>/year</span></div>
+                        <p>For up to 3 students</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Everything in Annual Plan</li>
+                            <li><i class="fas fa-check"></i> Separate accounts for 3 students</li>
+                            <li><i class="fas fa-check"></i> Parent dashboard</li>
+                            <li><i class="fas fa-check"></i> Progress tracking for all students</li>
+                            <li><i class="fas fa-check"></i> Dedicated family support</li>
+                        </ul>
+                        <button class="btn btn-primary select-plan" data-plan="family">Select Plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dashboard Section (Hidden by default) -->
+    <section class="dashboard container" id="dashboard">
+        <div class="dashboard-header">
+            <h2 class="welcome">Welcome, <span id="userName">Student</span>!</h2>
+            <div class="user-info">
+                <span id="userPlan">Free Plan</span>
+                <button class="btn btn-primary" id="upgradeBtn">Upgrade Plan</button>
+            </div>
+        </div>
+        
+        <h3 class="section-title">Your Courses</h3>
+        
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-img">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <div class="course-content">
+                    <h4>Mathematics</h4>
+                    <p>Advanced algebra and calculus materials</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                    <p>65% Complete</p>
+                    <button class="btn btn-primary">Continue Learning</button>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-img">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="course-content">
+                    <h4>Science</h4>
+                    <p>Physics and chemistry resources</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%;"></div>
+                    </div>
+                    <p>40% Complete</p>
+                    <button class="btn btn-primary">Continue Learning</button>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-img">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="course-content">
+                    <h4>Literature</h4>
+                    <p>Reading materials and analysis guides</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%;"></div>
+                    </div>
+                    <p>25% Complete</p>
+                    <button class="btn btn-primary">Continue Learning</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Subscribe to EduVerse</h2>
+                <span class="close">&times;</span>
+            </div>
+            
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="plan">Select Plan</label>
+                    <select class="form-control" id="plan">
+                        <option value="monthly">Monthly Plan - $4.99/month</option>
+                        <option value="annual">Annual Plan - $49.99/year (Save 15%)</option>
+                        <option value="family">Family Plan - $79.99/year (3 students)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" class="form-control" id="expiry" placeholder="MM/YY">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cvc">CVC</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="123">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Cardholder Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Full name on card">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login to Your Account</h2>
+                <span class="close">&times;</span>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Your password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                
+                <p style="text-align: center; margin-top: 1rem;">
+                    Don't have an account? <a href="#" id="showSignup">Sign up here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create an Account</h2>
+                <span class="close">&times;</span>
+            </div>
+            
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" class="form-control" id="signupName" placeholder="Your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" class="form-control" id="signupEmail" placeholder="Your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" class="form-control" id="signupPassword" placeholder="Create a password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                
+                <p style="text-align: center; margin-top: 1rem;">
+                    Already have an account? <a href="#" id="showLogin">Login here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EduVerse</h3>
+                    <p>Learning Without Breaks. Education Without Boundaries.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#" class="nav-link" data-section="home">Home</a>
+                    <a href="#" class="nav-link" data-section="courses">Courses</a>
+                    <a href="#" class="nav-link" data-section="resources">Resources</a>
+                    <a href="#" class="nav-link" data-section="about">About Us</a>
+                    <a href="#" class="nav-link" data-section="contact">Contact</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 678 Education Centre, Kisumu</p>
+                    <p><i class="fas fa-phone"></i> +254 113 071 937</p>
+                    <p><i class="fas fa-envelope"></i> support@eduverse.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 EduVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
